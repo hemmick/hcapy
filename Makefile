@@ -9,13 +9,12 @@ hcapy:
 	python3 setup.py sdist bdist_wheel
 
 libhcapy.so: hcapi
-        ar -x $(HCAPI_PATH)/src/***.a
-        ar -x $(HCAPI_PATH)/lib/***.a
-        $(CC) -shared *.o -o libhcapy.so
-
+	ar -x $(HCAPI_PATH)/src/***.a
+	ar -x $(HCAPI_PATH)/lib/***.a
+	$(CC) -shared *.o -o libhcapy.so
 
 hcapi:
-        make -C $(HCAPI_PATH) TARGET_PLATFORM=LINUX_ZIP2
+	make -C $(HCAPI_PATH) TARGET_PLATFORM=LINUX_ZIP2
 
 clean:
-        rm *.so *.o
+	rm *.so *.o

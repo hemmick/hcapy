@@ -9,7 +9,7 @@ setuptools.setup(
         author="hemmick",
         author_email="john.hemmick@silabs.com",
         description="HCA(Py) the z-ware hcapi wrapped in python",
-        long_description=long_description,
+        long_description=long_desc,
         long_description_content_type="text/markdown",
         url="https://github.com/hemmick/hcapy",
         packages=setuptools.find_packages(),
