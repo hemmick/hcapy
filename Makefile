@@ -6,6 +6,7 @@ HCAPI_PATH_OPTIMISTIC := ${HOME}/zwportal/src/zwave/hcapi
 HCAPI_PATH ?= ${HCAPI_PATH_OPTIMISTIC}
 
 hcapy:
+	python3 setup.py sdist bdist_wheel
 
 libhcapy.so: hcapi
         ar -x $(HCAPI_PATH)/src/***.a
